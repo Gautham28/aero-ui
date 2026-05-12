@@ -1,0 +1,20 @@
+.aero-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px; 
+    border: 1px solid transparent;
+    padding: 0.125rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .aero-badge.default {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  
+  .aero-badge.outline {
+    color: var(--foreground);
+    border-color: var(--border);
+  }
