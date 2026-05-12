@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aero UI | Ultra-lightweight UI Library</title>
+  
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="../src/css/base.css">
+  <link rel="stylesheet" href="../src/css/button.css">
+  <link rel="stylesheet" href="../src/css/badge.css">
+  <link rel="stylesheet" href="../src/css/input.css">
+  <link rel="stylesheet" href="../src/css/card.css">
+  <link rel="stylesheet" href="../src/css/dialog.css">
+  
+  <style>
+    /* Docs  page */
+    .docs-layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 250px; border-right: 1px solid var(--border); padding: 2rem; }
+    .main-content { flex: 1; padding: 4rem; max-width: 800px; }
+    .component-section { margin-bottom: 4rem; }
+    .component-section h2 { margin-bottom: 1.5rem; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .demo-box { padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius); display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <div class="docs-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>✈️ aero UI</h2>
+      <p style="color: var(--muted-foreground); font-size: 0.875rem;">Semantic, minimal, zero dependencies.</p>
+      <nav style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <a href="#button" class="aero-btn ghost" style="justify-content: flex-start;">Button</a>
+        <a href="#badge" class="aero-btn ghost" style="justify-content: flex-start;">Badge</a>
+        <a href="#input" class="aero-btn ghost" style="justify-content: flex-start;">Input</a>
+        <a href="#card" class="aero-btn ghost" style="justify-content: flex-start;">Card</a>
+        <a href="#dialog" class="aero-btn ghost" style="justify-content: flex-start;">Dialog</a>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="main-content">
+      <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">aero UI</h1>
+      <p style="font-size: 1.2rem; color: var(--muted-foreground); margin-bottom: 3rem;">
+        An ultra-lightweight HTML + CSS semantic component library with a modern aesthetic.
+      </p>
+
+      <!-- Buttons -->
+      <section id="button" class="component-section">
+        <h2>Buttons</h2>
+        <div class="demo-box">
+          <button class="aero-btn">Primary</button>
+          <button class="aero-btn outline">Outline</button>
+          <button class="aero-btn ghost">Ghost</button>
+        </div>
+      </section>
+
+      <!-- Badges -->
+      <section id="badge" class="component-section">
+        <h2>Badges</h2>
+        <div class="demo-box">
+          <span class="aero-badge default">New Release</span>
+          <span class="aero-badge outline">v1.0.0</span>
+        </div>
+      </section>
+
+      <!-- Inputs -->
+      <section id="input" class="component-section">
+        <h2>Input</h2>
+        <div class="demo-box" style="flex-direction: column; max-width: 300px;">
+          <div class="aero-input-group">
+            <label class="aero-label" for="email">Email address</label>
+            <input type="email" id="email" class="aero-input" placeholder="m@example.com">
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section id="card" class="component-section">
+        <h2>Cards</h2>
+        <div class="demo-box">
+          <div class="aero-card" style="width: 350px;">
+            <div class="aero-card-header">
+              <h3 class="aero-card-title">Create project</h3>
+              <p class="aero-card-description">Deploy your new project in one-click.</p>
+            </div>
+            <div class="aero-card-content">
+              <div class="aero-input-group">
+                <label class="aero-label">Name</label>
+                <input class="aero-input" placeholder="Name of your project">
+              </div>
+            </div>
+            <div class="aero-card-footer" style="justify-content: space-between;">
+              <button class="aero-btn outline">Cancel</button>
+              <button class="aero-btn">Deploy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dialog -->
+      <section id="dialog" class="component-section">
+        <h2>Dialog (Modal)</h2>
+        <div class="demo-box">
+          <button class="aero-btn" data-dialog-target="demo-dialog">Open Dialog</button>
+          
+          <dialog id="demo-dialog" class="aero-dialog">
+            <h3 class="aero-card-title" style="margin-bottom: 0.5rem;">Are you absolutely sure?</h3>
+            <p class="aero-card-description" style="margin-bottom: 1.5rem;">
+              This action cannot be undone. This will permanently delete your account.
+            </p>
+            <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+              <button class="aero-btn outline" data-dialog-close>Cancel</button>
+              <button class="aero-btn">Continue</button>
+            </div>
+          </dialog>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Import js -->
+  <script src="../src/js/dialog.js"></script>
+</body>
+</html>
