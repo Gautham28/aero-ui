@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aero UI | Usage</title>
+  
+  <!-- UI Library Source CSS -->
+  <link rel="stylesheet" href="../src/css/base.css">
+  
+  <!-- Docs Specific CSS -->
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+  <div class="docs-layout">
+    
+    <!-- Sidebar -->
+    <aside class="docs-sidebar">
+      <h2>✈️ aero UI</h2>
+      <nav class="docs-nav">
+        <a href="index.html">Home / Components</a>
+        <a href="#">Demo</a>
+        <!-- Notice we add a styling class here to show it's the active page -->
+        <a href="usage.html" style="color: var(--foreground); font-weight: 500;">Usage</a>
+        
+        <div class="docs-nav-group">Components</div>
+        <!-- We link back to specific sections on the index.html page -->
+        <a href="index.html#badge">Badge</a>
+        <a href="index.html#button">Button</a>
+        <a href="index.html#input">Input</a>
+        <a href="index.html#card">Card</a>
+        <a href="index.html#dialog">Dialog</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="docs-main">
+      <h1 class="docs-title">Usage</h1>
+      <p class="docs-description">Getting started with aero UI is incredibly simple. No build tools, no package managers, and absolutely zero dependencies.</p>
+      
+      <!-- STEP 1 -->
+      <section class="component-section">
+        <h3>1. The Base Setup (Required)</h3>
+        <p class="component-desc">
+          First, copy the <code>src/css</code> and <code>src/js</code> folders into your project. Then, link the <code>base.css</code> file inside your HTML's <code>&lt;head&gt;</code>. This file acts as the engine for the library—it contains all the CSS variables for the light/dark themes, the typography rules, and basic browser resets.
+        </p>
+        
+        <div class="docs-code-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;!-- Include the base engine --&gt;
+  &lt;link rel="stylesheet" href="path/to/css/base.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="component-section">
+        <h3>2. Import Components A La Carte</h3>
+        <p class="component-desc">
+          aero UI is completely modular. To keep your website's payload as small as an oat flake, only link the specific CSS files for the components you intend to use on that specific page.
+        </p>
+        
+        <div class="docs-code-box">
+<pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="path/to/css/base.css"&gt;
+  
+  &lt;!-- Only import what you need! --&gt;
+  &lt;link rel="stylesheet" href="path/to/css/button.css"&gt;
+  &lt;link rel="stylesheet" href="path/to/css/card.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="component-section">
+        <h3>3. Add Interactivity (Optional)</h3>
+        <p class="component-desc">
+          Most of aero UI is pure CSS. However, a few dynamic components (like the Dialog modal) require a tiny amount of vanilla JavaScript to handle click events. If you are using these components, link the JS file right before your closing <code>&lt;/body&gt;</code> tag.
+        </p>
+        
+        <div class="docs-code-box">
+<pre><code>&lt;body&gt;
+  &lt;!-- Your beautiful UI goes here --&gt;
+
+  &lt;!-- Import tiny JS scripts at the end --&gt;
+  &lt;script src="path/to/js/dialog.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="component-section">
+        <h3>4. Customizing the Theme</h3>
+        <p class="component-desc">
+          Want to change the default shadcn-like dark theme to something else? Simply open your `base.css` file and modify the CSS variables in the <code>:root</code> selector. The entire component library will automatically update to match your new colors.
+        </p>
+        
+        <div class="docs-code-box">
+<pre><code>/* Inside base.css */
+:root {
+  --primary: #3b82f6; /* Change to a brand blue */
+  --radius: 0.5rem;   /* Make corners slightly rounder */
+}</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
