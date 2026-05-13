@@ -13,6 +13,8 @@ body { margin: 0; font-family: system-ui, sans-serif; background-color: var(--ba
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  display: flex;         /* Added for theme toggle */
+  flex-direction: column; /* Added for theme toggle */
 }
 .docs-sidebar h2 { margin-top: 0; font-size: 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
 .docs-nav { display: flex; flex-direction: column; gap: 0.25rem; }

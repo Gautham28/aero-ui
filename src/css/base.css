@@ -12,8 +12,26 @@
     font-family: system-ui, -apple-system, sans-serif;
   }
   
+  /* 
+    We use the .dark class for manual toggling. 
+  */
+  .dark {
+    --background: #09090b;
+    --foreground: #fafafa;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --border: #27272a;
+    --primary: #fafafa;
+    --primary-foreground: #18181b;
+    --ring: #d4d4d8;
+  }
+  
+  /* 
+    We keep the media query for users who haven't set a preference, 
+    but ensure it doesn't override a manual "light" class choice.
+  */
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light) {
       --background: #09090b;
       --foreground: #fafafa;
       --muted: #27272a;
