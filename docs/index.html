@@ -8,6 +8,11 @@
   <!-- UI Library Source CSS -->
   <link rel="stylesheet" href="../src/css/base.css">
   <link rel="stylesheet" href="../src/css/badge.css">
+  <link rel="stylesheet" href="../src/css/button.css">
+  <link rel="stylesheet" href="../src/css/input.css">
+  <link rel="stylesheet" href="../src/css/card.css">
+  <link rel="stylesheet" href="../src/css/dialog.css">
+  
   <!-- Docs Specific CSS -->
   <link rel="stylesheet" href="docs.css">
 </head>
@@ -19,54 +24,224 @@
     <aside class="docs-sidebar">
       <h2>✈️ aero UI</h2>
       <nav class="docs-nav">
-        <a href="#home">Home</a>
-        <a href="#demo">Demo</a>
-        <a href="#usage">Usage</a>
+        <a href="index.html">Home / Components</a>
+        <a href="#">Demo</a>
+        <a href="usage.html">Usage</a>
         
         <div class="docs-nav-group">Components</div>
-        <a href="#badge" class="active">Badge</a>
+        <a href="#badge">Badge</a>
         <a href="#button">Button</a>
+        <a href="#input">Input</a>
         <a href="#card">Card</a>
         <a href="#dialog">Dialog</a>
-        <a href="#input">Input</a>
       </nav>
     </aside>
 
     <!-- Main Content Area -->
     <main class="docs-main">
+      <h1 class="docs-title">Components</h1>
+      <p class="docs-description">All the basic building blocks for your aero UI applications.</p>
       
-      <!-- BADGE COMPONENT SECTION -->
+      <!-- ==================== BADGE ==================== -->
       <section id="badge" class="component-section">
         <h3># Badge</h3>
         <p class="component-desc">Use <code>.aero-badge</code> for standard badges. Add <code>.outline</code> for an outlined variant.</p>
         
-        <!-- Tab Navigation -->
         <div class="docs-tabs">
           <button class="docs-tab-btn active" data-target="preview-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-            Preview
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Preview
           </button>
           <button class="docs-tab-btn" data-target="code-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            Code
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code
           </button>
         </div>
 
-        <!-- Tab Contents -->
         <div class="docs-tab-contents">
-          <!-- Preview Pane (Active by default) -->
           <div id="preview-badge" class="docs-tab-content active">
             <div class="docs-preview-box">
               <span class="aero-badge default">Default</span>
               <span class="aero-badge outline">Outline</span>
             </div>
           </div>
-
-          <!-- Code Pane (Hidden by default) -->
           <div id="code-badge" class="docs-tab-content">
             <div class="docs-code-box">
 <pre><code>&lt;span class="aero-badge default"&gt;Default&lt;/span&gt;
 &lt;span class="aero-badge outline"&gt;Outline&lt;/span&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== BUTTON ==================== -->
+      <section id="button" class="component-section">
+        <h3># Button</h3>
+        <p class="component-desc">Use <code>.aero-btn</code>. Add <code>.outline</code> or <code>.ghost</code> for variants.</p>
+        
+        <div class="docs-tabs">
+          <button class="docs-tab-btn active" data-target="preview-button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Preview
+          </button>
+          <button class="docs-tab-btn" data-target="code-button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code
+          </button>
+        </div>
+
+        <div class="docs-tab-contents">
+          <div id="preview-button" class="docs-tab-content active">
+            <div class="docs-preview-box">
+              <button class="aero-btn">Primary</button>
+              <button class="aero-btn outline">Outline</button>
+              <button class="aero-btn ghost">Ghost</button>
+            </div>
+          </div>
+          <div id="code-button" class="docs-tab-content">
+            <div class="docs-code-box">
+<pre><code>&lt;button class="aero-btn"&gt;Primary&lt;/button&gt;
+&lt;button class="aero-btn outline"&gt;Outline&lt;/button&gt;
+&lt;button class="aero-btn ghost"&gt;Ghost&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== INPUT ==================== -->
+      <section id="input" class="component-section">
+        <h3># Input</h3>
+        <p class="component-desc">Use <code>.aero-input-group</code> to wrap your <code>.aero-label</code> and <code>.aero-input</code>.</p>
+        
+        <div class="docs-tabs">
+          <button class="docs-tab-btn active" data-target="preview-input">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Preview
+          </button>
+          <button class="docs-tab-btn" data-target="code-input">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code
+          </button>
+        </div>
+
+        <div class="docs-tab-contents">
+          <div id="preview-input" class="docs-tab-content active">
+            <div class="docs-preview-box">
+              <div class="aero-input-group" style="width: 100%; max-width: 320px;">
+                <label class="aero-label" for="email">Email address</label>
+                <input type="email" id="email" class="aero-input" placeholder="m@example.com">
+              </div>
+            </div>
+          </div>
+          <div id="code-input" class="docs-tab-content">
+            <div class="docs-code-box">
+<pre><code>&lt;div class="aero-input-group"&gt;
+  &lt;label class="aero-label" for="email"&gt;Email address&lt;/label&gt;
+  &lt;input type="email" id="email" class="aero-input" placeholder="m@example.com"&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CARD ==================== -->
+      <section id="card" class="component-section">
+        <h3># Card</h3>
+        <p class="component-desc">Build complex layouts using the card header, content, and footer sections.</p>
+        
+        <div class="docs-tabs">
+          <button class="docs-tab-btn active" data-target="preview-card">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Preview
+          </button>
+          <button class="docs-tab-btn" data-target="code-card">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code
+          </button>
+        </div>
+
+        <div class="docs-tab-contents">
+          <div id="preview-card" class="docs-tab-content active">
+            <div class="docs-preview-box" style="background-color: var(--muted);">
+              <div class="aero-card" style="width: 350px; margin: 0 auto;">
+                <div class="aero-card-header">
+                  <h3 class="aero-card-title">Create project</h3>
+                  <p class="aero-card-description">Deploy your new project in one-click.</p>
+                </div>
+                <div class="aero-card-content">
+                  <div class="aero-input-group">
+                    <label class="aero-label">Name</label>
+                    <input class="aero-input" placeholder="Name of your project">
+                  </div>
+                </div>
+                <div class="aero-card-footer" style="justify-content: space-between;">
+                  <button class="aero-btn outline">Cancel</button>
+                  <button class="aero-btn">Deploy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="code-card" class="docs-tab-content">
+            <div class="docs-code-box">
+<pre><code>&lt;div class="aero-card"&gt;
+  &lt;div class="aero-card-header"&gt;
+    &lt;h3 class="aero-card-title"&gt;Create project&lt;/h3&gt;
+    &lt;p class="aero-card-description"&gt;Deploy your new project in one-click.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="aero-card-content"&gt;
+    &lt;div class="aero-input-group"&gt;
+      &lt;label class="aero-label"&gt;Name&lt;/label&gt;
+      &lt;input class="aero-input" placeholder="Name of your project"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="aero-card-footer" style="justify-content: space-between;"&gt;
+    &lt;button class="aero-btn outline"&gt;Cancel&lt;/button&gt;
+    &lt;button class="aero-btn"&gt;Deploy&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== DIALOG ==================== -->
+      <section id="dialog" class="component-section">
+        <h3># Dialog (Modal)</h3>
+        <p class="component-desc">A native HTML <code>&lt;dialog&gt;</code> element. Use <code>data-dialog-target</code> to open and <code>data-dialog-close</code> to close.</p>
+        
+        <div class="docs-tabs">
+          <button class="docs-tab-btn active" data-target="preview-dialog">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Preview
+          </button>
+          <button class="docs-tab-btn" data-target="code-dialog">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Code
+          </button>
+        </div>
+
+        <div class="docs-tab-contents">
+          <div id="preview-dialog" class="docs-tab-content active">
+            <div class="docs-preview-box">
+              <button class="aero-btn" data-dialog-target="demo-dialog">Open Dialog</button>
+              
+              <dialog id="demo-dialog" class="aero-dialog">
+                <h3 class="aero-card-title" style="margin-bottom: 0.5rem;">Are you absolutely sure?</h3>
+                <p class="aero-card-description" style="margin-bottom: 1.5rem;">
+                  This action cannot be undone. This will permanently delete your account.
+                </p>
+                <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+                  <button class="aero-btn outline" data-dialog-close>Cancel</button>
+                  <button class="aero-btn" data-dialog-close>Continue</button>
+                </div>
+              </dialog>
+            </div>
+          </div>
+          <div id="code-dialog" class="docs-tab-content">
+            <div class="docs-code-box">
+<pre><code>&lt;!-- Trigger Button --&gt;
+&lt;button class="aero-btn" data-dialog-target="my-modal"&gt;Open Dialog&lt;/button&gt;
+
+&lt;!-- The Dialog Element --&gt;
+&lt;dialog id="my-modal" class="aero-dialog"&gt;
+  &lt;h3 class="aero-card-title"&gt;Are you absolutely sure?&lt;/h3&gt;
+  &lt;p class="aero-card-description"&gt;This action cannot be undone.&lt;/p&gt;
+  
+  &lt;div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.5rem;"&gt;
+    &lt;button class="aero-btn outline" data-dialog-close&gt;Cancel&lt;/button&gt;
+    &lt;button class="aero-btn" data-dialog-close&gt;Continue&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
             </div>
           </div>
         </div>
@@ -97,5 +272,8 @@
       });
     });
   </script>
+
+  <!-- Import aero UI JS for the Dialog component functionality -->
+  <script src="../src/js/dialog.js"></script>
 </body>
 </html>
