@@ -55,10 +55,41 @@ body { margin: 0; font-family: system-ui, sans-serif; background-color: var(--ba
   transition: all 0.2s;
 }
 .docs-nav a:hover, .docs-nav a.active { color: var(--foreground); background-color: var(--muted); }
+.docs-nav-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 0.625rem 0.5rem 0.5rem 0.5rem;
+}
 .docs-nav-group { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted-foreground); padding-left: 0.75rem; font-weight: 600; }
 
 /* Main Content */
 .docs-main { flex: 1; padding: 3rem 4rem; max-width: 900px; }
+.docs-main--home {
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.docs-home-inner {
+  width: 100%;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.docs-home-inner .docs-hero-logo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.docs-home-inner .docs-cta-row {
+  justify-content: center;
+}
+.docs-home-inner .docs-feature-grid {
+  text-align: left;
+}
+.docs-home-inner .docs-feature-grid .aero-card-content p {
+  text-align: left;
+}
 .docs-title { font-size: 2.25rem; margin-top: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .docs-description { color: var(--muted-foreground); font-size: 1.125rem; margin-bottom: 2.5rem; }
 
