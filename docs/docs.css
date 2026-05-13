@@ -16,7 +16,35 @@ body { margin: 0; font-family: system-ui, sans-serif; background-color: var(--ba
   display: flex;         /* Added for theme toggle */
   flex-direction: column; /* Added for theme toggle */
 }
-.docs-sidebar h2 { margin-top: 0; font-size: 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+.docs-sidebar .docs-brand {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.docs-sidebar .docs-brand a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+.docs-logo-img {
+  height: auto;
+  display: block;
+}
+.docs-logo-img--sidebar {
+  max-height: 2.25rem;
+  width: auto;
+}
+.docs-logo-img--hero {
+  max-height: 4.5rem;
+  max-width: min(100%, 22rem);
+  width: auto;
+}
+.docs-hero-logo {
+  margin: 0 0 1rem 0;
+  line-height: 0;
+}
 .docs-nav { display: flex; flex-direction: column; gap: 0.25rem; }
 .docs-nav a {
   text-decoration: none;
