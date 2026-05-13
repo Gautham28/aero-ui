@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="docs.css">
 </head>
 <body>
+    
 
   <div class="docs-layout">
     
@@ -24,8 +25,8 @@
     <aside class="docs-sidebar">
       <h2>✈️ aero UI</h2>
       <nav class="docs-nav">
-        <a href="index.html">Home / Components</a>
-        <a href="#">Demo</a>
+        <a href="index.html" class="active">Home / Components</a>
+        <a href="demo.html">Demo</a>
         <a href="usage.html">Usage</a>
         
         <div class="docs-nav-group">Components</div>
@@ -39,8 +40,21 @@
 
     <!-- Main Content Area -->
     <main class="docs-main">
-      <h1 class="docs-title">Components</h1>
-      <p class="docs-description">All the basic building blocks for your aero UI applications.</p>
+      
+      <!-- ==================== HERO SECTION ==================== -->
+      <header style="padding: 2rem 0 4rem 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border);">
+        <h1 style="font-size: 3.5rem; letter-spacing: -0.05em; margin-bottom: 1rem; margin-top: 0;">✈️ aero UI</h1>
+        <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 600px; line-height: 1.6;">
+          An ultra-lightweight, semantic UI library with a <strong>shadcn</strong> aesthetic. 
+          Zero dependencies. No build tools. Just clean HTML and CSS.
+        </p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <a href="usage.html" class="aero-btn" style="text-decoration: none;">Get Started</a>
+          <a href="https://github.com/your-username/aero-ui" class="aero-btn outline" style="text-decoration: none;">GitHub</a>
+        </div>
+      </header>
+
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Components</h2>
       
       <!-- ==================== BADGE ==================== -->
       <section id="badge" class="component-section">
