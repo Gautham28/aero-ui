@@ -90,6 +90,23 @@ body { margin: 0; font-family: system-ui, sans-serif; background-color: var(--ba
 .docs-home-inner .docs-feature-grid .aero-card-content p {
   text-align: left;
 }
+.docs-main--centered {
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.docs-page-inner {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.docs-main--centered .docs-page-inner #components > .docs-description {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
 .docs-title { font-size: 2.25rem; margin-top: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .docs-description { color: var(--muted-foreground); font-size: 1.125rem; margin-bottom: 2.5rem; }
 
