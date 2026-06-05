@@ -4,18 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aero UI | Usage</title>
-  
-  <!-- 1. Link to the library's base styles -->
   <link rel="stylesheet" href="../src/css/base.css">
-  
-  <!-- 2. Link to the documentation styles we built -->
   <link rel="stylesheet" href="docs.css">
 </head>
 <body>
 
   <div class="docs-layout">
-    
-    <!-- Sidebar Navigation -->
     <aside class="docs-sidebar">
       <h2 class="docs-brand"><a href="index.html"><img src="aerouilogo.png" alt="aero UI" class="docs-logo-img docs-logo-img--sidebar"></a></h2>
       <nav class="docs-nav">
@@ -32,49 +26,59 @@
       </nav>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="docs-main">
-        <h1 class="docs-title">Installation and Usage</h1>
-        <p style="font-style: italic; color: var(--muted-foreground); border-left: 2px solid var(--border); padding-left: 1rem; margin-bottom: 2rem;">
-          IMPORTANT: aero UI is currently in v1-beta.
-        </p>
-      
-        <!-- CDN Section -->
-        <section class="component-section">
-          <h3>CDN</h3>
-          <p class="component-desc">Include the bundled CSS directly in your HTML header:</p>
-          <div class="docs-code-box">
-            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/your-username/aero-ui/src/aero.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/gh/your-username/aero-ui/src/js/dialog.js" defer&gt;&lt;/script&gt;</code></pre>
-          </div>
-        </section>
-      
-        <!-- Download Section -->
-        <section class="component-section">
-          <h3>Download</h3>
-          <p class="component-desc">Download the source files directly to your project:</p>
-          <div class="docs-code-box">
-            <pre><code>curl -O https://raw.githubusercontent.com/user/aero-ui/main/src/aero.css</code></pre>
-          </div>
-        </section>
-      
-        <!-- Basic Usage Section -->
-        <section class="component-section">
-          <h3>Basic Usage</h3>
-          <p class="component-desc">aero UI uses a class-based system inspired by shadcn for maximum compatibility:</p>
-          <div class="docs-code-box">
+      <h1 class="docs-title">Installation and Usage</h1>
+      <p style="font-style: italic; color: var(--muted-foreground); border-left: 2px solid var(--border); padding-left: 1rem; margin-bottom: 2rem;">
+        Pin a version in CDN URLs (e.g. <code>@1.0.0</code>) for stable installs in production.
+      </p>
+
+      <section class="component-section">
+        <h3>npm</h3>
+        <p class="component-desc">Install the package from npm:</p>
+        <div class="docs-code-box">
+          <pre><code>npm install @gautham28/aero-ui</code></pre>
+        </div>
+        <p class="component-desc" style="margin-top: 1rem;">Then import in your project (bundler):</p>
+        <div class="docs-code-box">
+<pre><code>import '@gautham28/aero-ui/aero.css';
+import '@gautham28/aero-ui/dialog.js';</code></pre>
+        </div>
+      </section>
+
+      <section class="component-section">
+        <h3>CDN</h3>
+        <p class="component-desc">Include the CSS and JS directly in your HTML (via jsDelivr):</p>
+        <div class="docs-code-box">
+<pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gautham28/aero-ui@1.0.0/src/aero.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/@gautham28/aero-ui@1.0.0/src/js/dialog.js" defer&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="component-section">
+        <h3>Download</h3>
+        <p class="component-desc">Download the bundled CSS from GitHub:</p>
+        <div class="docs-code-box">
+          <pre><code>curl -O https://raw.githubusercontent.com/Gautham28/aero-ui/main/src/aero.css</code></pre>
+        </div>
+      </section>
+
+      <section class="component-section">
+        <h3>Basic Usage</h3>
+        <p class="component-desc">aero UI uses a class-based system inspired by shadcn for maximum compatibility:</p>
+        <div class="docs-code-box">
 <pre><code>&lt;html&gt;
   &lt;head&gt;
-    &lt;link rel="stylesheet" href="aero.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gautham28/aero-ui@1.0.0/src/aero.css"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@gautham28/aero-ui@1.0.0/src/js/dialog.js" defer&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Hello World&lt;/h1&gt;
     &lt;button class="aero-btn"&gt;Click me&lt;/button&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
   </div>
 
 </body>

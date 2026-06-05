@@ -1,0 +1,46 @@
+{
+  "name": "@gautham28/aero-ui",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight, zero-dependency, class-based HTML + CSS UI component library.",
+  "license": "MIT",
+  "homepage": "https://github.com/Gautham28/aero-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gautham28/aero-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gautham28/aero-ui/issues"
+  },
+  "keywords": [
+    "ui",
+    "css",
+    "components",
+    "vanilla",
+    "zero-dependencies",
+    "shadcn"
+  ],
+  "style": "src/aero.css",
+  "main": "src/js/dialog.js",
+  "exports": {
+    ".": {
+      "style": "./src/aero.css",
+      "default": "./src/js/dialog.js"
+    },
+    "./aero.css": "./src/aero.css",
+    "./dialog.js": "./src/js/dialog.js"
+  },
+  "unpkg": "src/aero.css",
+  "jsdelivr": "src/aero.css",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css",
+    "src/js/*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
